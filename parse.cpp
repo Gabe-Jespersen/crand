@@ -58,7 +58,7 @@ vector<long long int> parse(int argc, char **argv)
         if(!strcmp(argv[i],"-a"))
         {
             maximum = atoi(argv[i+1]);
-            maxset - true;
+            maxset = true;
             i++;
         }
     }
