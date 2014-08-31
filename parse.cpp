@@ -42,22 +42,28 @@ vector<long long int> parse(int argc, char **argv)
     long long int minimum;
     long long int maximum;
 
+    bool maxset;
+    bool minset;
+
     for(int i = 1; i < (argc-1); i++)//minus 1 so that if last flag is -i or -a
     {                                //the program won't read a value that
         if(!strcmp(argv[i],"-i"))    //doesn't exist
         {
             minimum = atoi(argv[i+1]);
+            minset = true; //setting if minimum/maximum has been set, can't do
+                           //!minimum, because, if it is 0, it returns true
             i++;//won't read the next value, which is set to the minimum, also
                 //done in the maximum
         }
         if(!strcmp(argv[i],"-a"))
         {
             maximum = atoi(argv[i+1]);
+            maxset - true;
             i++;
         }
     }
 
-    if(!(maximum)||!(minimum))//if there isn't a value for max or min
+    if(!(minset)||!(maxset))//if there isn't a value for max or min
     {
         helpMenu();
         exit(1);

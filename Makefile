@@ -17,6 +17,7 @@ clean:
 	rm -rf *.o crand
 
 install:
+	make
 	cp crand /usr/bin/crand
 
 uninstall:
