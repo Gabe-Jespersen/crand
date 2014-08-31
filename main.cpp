@@ -28,7 +28,13 @@ int main(int argc, char **argv)
 {
     srand(time(NULL));
     vector<long long int> range = parse(argc, argv);
-    long long int result = range.at(0) + (rand() % (range.at(1) - range.at(0) + 1));
-    cout << result << endl;
+    long long int result;
+    // range.at(0) + (rand() % (range.at(1) - range.at(0) + 1))
+    
+    for(int i = 0; i < range.at(2);i++)
+    {
+        result = range.at(0) + (rand() % (range.at(1) - range.at(0) + 1));
+        cout << result << endl;
+    }
     return 0;
 }
