@@ -1,0 +1,17 @@
+This is designed to be a simple, easy to use, random number generator, to use
+this program, simply run the following command:
+    ./crand -i <minimum number> -a <maximum number>
+This program can also be install, using the command:
+    make install
+If it is installed, you can simply use:
+    crand -i <minimum number> -a <maximum number>
+
+
+To build on a *nix environment, run:
+    make
+To install:
+    make install
+To uninstall:
+    make uninstall
+To remove all files that were not part of the repo:
+    make clean
