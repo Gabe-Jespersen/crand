@@ -15,10 +15,3 @@ parse.o: parse.cpp parse.h
 
 clean:
 	rm -rf *.o crand
-
-install:
-	make
-	cp crand /usr/bin/crand
-
-uninstall:
-	rm /usr/bin/crand
